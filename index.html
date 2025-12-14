@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="icon" href="images/icon.png" type="image/png">
+  <link rel="stylesheet" href="index.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+  <!-- Navbar Start -->
+  <nav class="navbar" role="navigation" aria-label="Main Navigation">
+    <div class="nav-left">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+    </div>
+
+    <!-- desktop nav -->
+    <ul class="nav-list">
+      <li><a href="index.html" class="nav-btn">Home</a></li>
+      <li><button id="btn-professional" class="nav-btn">Professional</button></li>
+      <li><button id="btn-skills" class="nav-btn">Skills</button></li>
+      <li><button id="btn-projects" class="nav-btn">Projects</button></li>
+      <li><button id="btn-hire" class="nav-btn">Hire Me</button></li>
+    </ul>
+
+    <!-- mobile nav toggle -->
+    <button id="nav-toggle" class="nav-toggle" aria-label="Open Menu" aria-expanded="false">
+      <span class="hamburger"></span>
+    </button>
+  </nav>
+
+  <!-- mobile menu (slides in) -->
+  <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+    <ul>
+      <li><a href="index.html" class="nav-btn mobile-link">Home</a></li>
+      <li><button id="m-btn-professional" class="nav-btn mobile-link">Professional</button></li>
+      <li><button id="m-btn-skills" class="nav-btn mobile-link">Skills</button></li>
+      <li><button id="m-btn-projects" class="nav-btn mobile-link">Projects</button></li>
+      <li><button id="m-btn-hire" class="nav-btn mobile-link">Hire Me</button></li>
+    </ul>
+  </div>
+
+  <!-- Professional Section Overlay -->
+  <div id="overlay" class="hidden" aria-hidden="true">
+    <section id="professional-section">
+      <div class="container">
+        <button id="close-professional" class="close-btn">✕</button>
+        <header>
+          <h1>Professional Experience</h1>
+        </header>
+
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+
+          <!-- Timeline Items -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h2 class="job-title">Machine Learning Engineer</h2>
+              <div class="tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">TensorFlow</span>
+                <span class="tech-tag">Scikit-learn</span>
+                <span class="tech-tag">Keras</span>
+                <span class="tech-tag">OpenCV</span>
+                <span class="tech-tag">NLP</span>
+              </div>
+              <ul class="responsibilities">
+                <p>I am a Machine Learning Engineer skilled in building AI models for NLP, computer vision, and prediction tasks. I create clean data pipelines, optimize models, and deploy scalable, production-ready ML solutions.</p>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h2 class="job-title">Frontend Developer</h2>
+              <div class="tech-stack">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">Bootstrap</span>
+                <span class="tech-tag">Tailwind CSS</span>
+              </div>
+              <ul class="responsibilities">
+                <p>I am a Frontend Developer skilled in building responsive, user-friendly websites with HTML, CSS, and JavaScript. I create clean, fast, and visually appealing interfaces for all devices.</p>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h2 class="job-title">UI/UX Designer</h2>
+              <div class="tech-stack">
+                <span class="tech-tag">Figma</span>
+                <span class="tech-tag">Adobe XD</span>
+                <span class="tech-tag">Wireframing</span>
+                <span class="tech-tag">User Research</span>
+                <span class="tech-tag">Design Systems</span>
+                <span class="tech-tag">Prototyping</span>
+              </div>
+              <ul class="responsibilities">
+                <p>I am a UI/UX Designer who creates intuitive, visually appealing, and user-centered digital experiences. I design clean interfaces and smooth interactions that balance usability and aesthetics.</p>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" id="scrollToTop" title="Back to top" aria-hidden="true">
+        <i class="fas fa-arrow-up"></i>
+      </div>
+    </section>
+  </div>
+
+  <!-- Internship overlay -->
+  <div id="internship-overlay" class="hidden" aria-hidden="true">
+    <button id="close-internship" class="close-btn">✕</button>
+
+    <div class="container">
+      <header>
+        <h1>Internships</h1>
+      </header>
+
+      <div class="timeline-container">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h2 class="job-title">Machine Learning Intern</h2>
+            <div class="company"><i class="fas fa-building"></i> Infosys Springboard 6.0</div>
+            <div class="duration">Nov 2025 - Feb 2026</div>
+            <p>Developed an audio-to-text pipeline that segmented speech into topics and generated structured text.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h2 class="job-title">Full Stack Web Development</h2>
+            <div class="company"><i class="fas fa-building"></i> Euphoria GenX</div>
+            <div class="duration">Nov 2024 - Apr 2025</div>
+            <p>Built full-stack web applications with modern frontend, backend, and database technologies.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h2 class="job-title">Data Science & AI</h2>
+            <div class="company"><i class="fas fa-building"></i> Ardent Computech Pvt. Ltd.</div>
+            <div class="duration">Mar 2024 - Aug 2024</div>
+            <p>Developed and optimized ML models, cleaned datasets, engineered features, and supported AI deployments.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Skills overlay -->
+  <div id="skills-overlay" class="hidden" aria-hidden="true">
+    <button id="close-skills" class="close-btn">✕</button>
+
+    <section class="skills-section">
+      <h2 class="skill-title">Machine Learning & AI</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fa-brands fa-python icon"></i>
+          <h3>Python</h3>
+          <p>ML Language</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-brain icon"></i>
+          <h3>TensorFlow</h3>
+          <p>Deep Learning Framework</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-chart-line icon"></i>
+          <h3>Scikit-learn</h3>
+          <p>ML Algorithms</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-layer-group icon"></i>
+          <h3>Keras</h3>
+          <p>Neural Networks</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-eye icon"></i>
+          <h3>OpenCV</h3>
+          <p>Computer Vision</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-language icon"></i>
+          <h3>NLP</h3>
+          <p>Language Processing</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills-section">
+      <h2 class="skill-title">Frontend Development</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fa-brands fa-html5 icon"></i>
+          <h3>HTML</h3>
+          <p>Markup Language</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-brands fa-css3-alt icon"></i>
+          <h3>CSS</h3>
+          <p>Styling Language</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-brands fa-square-js icon"></i>
+          <h3>JavaScript</h3>
+          <p>Programming Language</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-brands fa-react icon"></i>
+          <h3>React.js</h3>
+          <p>Frontend Library</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-brands fa-bootstrap icon"></i>
+          <h3>Bootstrap</h3>
+          <p>CSS Framework</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-feather icon"></i>
+          <h3>Tailwind CSS</h3>
+          <p>Utility CSS Framework</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills-section">
+      <h2 class="skill-title">UI/UX & Design</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fa-brands fa-figma icon"></i>
+          <h3>Figma</h3>
+          <p>Interface Design Tool</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-pen-ruler icon"></i>
+          <h3>Adobe XD</h3>
+          <p>Prototyping Tool</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-regular fa-object-group icon"></i>
+          <h3>Wireframing</h3>
+          <p>UX Process</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-user-check icon"></i>
+          <h3>User Research</h3>
+          <p>UX Strategy</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-shapes icon"></i>
+          <h3>Design Systems</h3>
+          <p>Component Libraries</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-flask icon"></i>
+          <h3>Prototyping</h3>
+          <p>Interactive UI Flow</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Projects section (overlay) -->
+  <section id="projects-section" class="projects-section hidden" aria-hidden="true">
+    <button id="close-projects" class="close-btn">✕</button>
+
+    <h2 class="projects-heading">Projects</h2>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="images/project1.jpg" class="project-img" alt="Project 1" />
+        <h3 class="project-title">SMS Spam Detection</h3>
+        <p class="project-desc">
+          Created an ML model to accurately classify SMS messages as spam or non-spam using NLP techniques.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Data cleaning</span>
+          <span class="tag">Scikit-learn</span>
+          <span class="tag">NLP preprocessing</span>
+          <span class="tag">ML Algorithms</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/project2.jpg" class="project-img" alt="Project 2" />
+        <h3 class="project-title">Air Quality Index Prediction</h3>
+        <p class="project-desc">
+          Built an AQI prediction model to forecast air quality levels using environmental data.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Scikit-learn</span>
+          <span class="tag">Random Forest</span>
+          <span class="tag">Pandas</span>
+          <span class="tag">Matplotlib</span>
+          <span class="tag">XGBoost</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/project3.jpg" class="project-img" alt="Project 3" />
+        <h3 class="project-title">Energy Usage Prediction</h3>
+        <p class="project-desc">
+          Predicted future energy usage using ML models to support efficient planning and management.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Pandas</span>
+          <span class="tag">NumPy</span>
+          <span class="tag">Scikit-learn</span>
+          <span class="tag">Data preprocessing</span>
+          <span class="tag">ML Algorithms</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/project4.jpg" class="project-img" alt="Project 4" />
+        <h3 class="project-title">Audio Topic Segmentation</h3>
+        <p class="project-desc">
+          Converted audio to text, identified topic shifts, and generated structured paragraphs for each segment.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Speech-to-Text</span>
+          <span class="tag">NLP</span>
+          <span class="tag">Topic Modeling</span>
+          <span class="tag">Text Summarization</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certifications-section" class="projects-section hidden" aria-hidden="true">
+    <button id="close-certifications" class="close-btn">✕</button>
+
+    <h2 class="projects-heading">Certifications</h2>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="images/certificate1.jpg" class="project-img" alt="Certificate 1" />
+        <h3 class="project-title">Ardent Computech Pvt. Ltd.</h3>
+        <p class="project-desc">Data Science & AI</p>
+      </div>
+
+      <div class="project-card">
+        <img src="images/certificate2.jpg" class="project-img" alt="Certificate 2" />
+        <h3 class="project-title">Euphoria GenX</h3>
+        <p class="project-desc">Full Stack Web Development</p>
+      </div>
+
+      <div class="project-card">
+        <img src="images/certificate3.jpg" class="project-img" alt="Certificate 3" />
+        <h3 class="project-title">Smart India Hackathon</h3>
+        <p class="project-desc">Smart India Hackathon 2023 Finalist</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact overlay -->
+  <div id="contact-overlay" class="hidden" aria-hidden="true">
+    <button id="close-contact" class="close-btn">✕</button>
+
+    <div id="contact-wrapper">
+      <form id="contact-form">
+        <h2 style="color:white; text-align:center; margin-bottom:10px;">Contact Me</h2>
+
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+
+        <p style="color:#bbb; font-size:12px; margin-top:5px;">
+          Note: This message will be sent directly to my email.
+        </p>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <p id="status"></p>
+  </div>
+
+  <!-- Video Body Start -->
+  <div class="mainshow">
+    <video autoplay loop muted playsinline class="bg-video" aria-hidden="true">
+      <source src="images/main_video.mp4" type="video/mp4" />
+    </video>
+
+    <div class="content">
+      <h1 class="heading">Subinoy Karmakar - AI Engineer</h1>
+      <p class="description desc-desktop">
+        I am a Machine Learning Engineer specializing in end-to-end AI solutions using Python and modern ML frameworks, with expertise in NLP, computer vision, model optimization, and real-world deployment.
+        </p>
+
+        <p class="description desc-mobile">
+        I am a Machine Learning Engineer specializing in end-to-end AI solutions with Python, specializing in NLP, computer vision, and real-world deployment.
+        </p>
+      <div class="buttons">
+        <a href="images/resume.pdf" target="_blank" class="btn-resume"><i class="fa-solid fa-play"></i>Resume</a>
+        <a href="https://www.linkedin.com/in/subinoy-karmakar-1275a1283/" target="_blank" class="btn-linkedin"><i class="fa-solid fa-circle-exclamation"></i>LinkedIn</a>
+      </div>
+    </div>
+  </div>
+  <!-- Video Body End -->
+
+  <!-- Cards -->
+  <div class="card-set1">
+    <h2 class="section-title">Today's Top Picks For Recruiter</h2>
+    <div class="card-row">
+      <a class="card" id="open-projects-card" style="background-image:url('images/img1.jpg')">Projects</a>
+      <a class="card" id="open-internship-card" style="background-image:url('images/img2.jpg')">Internships</a>
+      <a class="card" id="open-certifications-card" style="background-image:url('images/img3.jpg')">Certifications</a>
+      <a class="card" id="open-skills-card" style="background-image:url('images/img4.jpg')">Skills</a>
+      <a class="card" id="open-tools-card" style="background-image:url('images/img5.jpg')">Tools & Technologies</a>
+      <!-- <a class="card" style="background-image:url('images/img6.jpg')">Achievements</a> -->
+      <a class="card" href="https://www.google.com/search?q=future+institute+of+engineering+and+management&oq=fut&gs_lcrp=EgZjaHJvbWUqDwgAECMYJxjjAhiABBiKBTIPCAAQIxgnGOMCGIAEGIoFMgwIARAuGCcYgAQYigUyDwgCEC4YQxixAxiABBiKBTIGCAMQRRg5MgwIBBAAGEMYgAQYigUyBggFEEUYPTIGCAYQRRg9MgYIBxBFGDzSAQgzMjc2ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8" style="background-image:url('images/img7.jpg')">Education</a>
+    </div>
+  </div>
+
+  <div class="card-set1">
+    <h2 class="section-title">Continue Watching For Recruiter</h2>
+    <div class="card-row">
+      <a class="card" style="background-image:url('images/img8.jpg')">Coding</a>
+      <a class="card" style="background-image:url('images/img9.png')">UI/UX Design</a>
+      <a class="card" style="background-image:url('images/img15.jpg')">Open Source</a>
+      <a class="card" style="background-image:url('images/img11.jpg')">Video Editing</a>
+      <a class="card" style="background-image:url('images/img6.jpg')">Achievements</a>
+      <!-- <a class="card" style="background-image:url('images/img12.jpg')">Art & Craft</a>
+      <a class="card" style="background-image:url('images/img13.jpg')">Drawing</a>
+      <a class="card" style="background-image:url('images/img14.jpg')">Video Games</a> -->
+    </div>
+  </div>
+
+  <div class="card-set1">
+    <h2 class="section-title">Creativity & Personal Interests</h2>
+    <div class="card-row">
+      <!-- <a class="card" style="background-image:url('images/img8.jpg')">Coding</a> -->
+      <!-- <a class="card" style="background-image:url('images/img9.png')">UI/UX Design</a> -->
+      <a class="card" style="background-image:url('images/img10.jpg')">Photography</a>
+      <a class="card" style="background-image:url('images/img11.jpg')">Video Editing</a>
+      <a class="card" style="background-image:url('images/img12.jpg')">Art & Craft</a>
+      <a class="card" style="background-image:url('images/img13.jpg')">Drawing</a>
+      <a class="card" style="background-image:url('images/img14.jpg')">Video Games</a>
+      <a class="card" style="background-image:url('images/img16.jpg')">Music</a>
+      <a class="card" style="background-image:url('images/img17.jpg')">Travel Vlogs</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">SUBINOY</div>
+
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/subinoy-karmakar-1275a1283/" target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="mailto:subinoykarmakar123456@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="https://github.com/SubinoyKarmakar" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.instagram.com/karmakarsubinoy" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/subinoy.karmakar.18/" target="_blank">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+      </div>
+
+      <p class="footer-copy">© 2025 Subinoy Karmakar. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- EmailJS / app logic -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    /* ---------------- GLOBAL HELPER ---------------- */
+    function hideAllOverlays() {
+      [
+        "overlay",
+        "skills-overlay",
+        "projects-section",
+        "certifications-section",
+        "contact-overlay",
+        "internship-overlay"
+      ].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.classList.add("hidden");
+      });
+      // also close mobile menu if open
+      const mm = document.getElementById("mobile-menu");
+      const toggle = document.getElementById("nav-toggle");
+      if (mm && mm.classList.contains("open")) {
+        mm.classList.remove("open");
+        if (toggle) {
+          toggle.setAttribute("aria-expanded", "false");
+        }
+        mm.setAttribute("aria-hidden", "true");
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      /* ---------------- TIMELINE ANIMATION ---------------- */
+      const timelineItems = document.querySelectorAll(".timeline-item");
+      const scrollToTopBtn = document.getElementById("scrollToTop");
+
+      function isInView(el) {
+        const r = el.getBoundingClientRect();
+        return r.top <= window.innerHeight * 0.8 && r.bottom >= 0;
+      }
+
+      function handleScroll() {
+        timelineItems.forEach(i => isInView(i) && i.classList.add("visible"));
+        if (scrollToTopBtn) {
+          scrollToTopBtn.style.display = window.scrollY > 300 ? "flex" : "none";
+        }
+      }
+
+      window.addEventListener("scroll", handleScroll);
+      handleScroll();
+
+      /* ---------------- NAVBAR (existing) ---------------- */
+      document.getElementById("btn-professional")?.addEventListener("click", () => {
+        hideAllOverlays();
+        document.getElementById("overlay")?.classList.remove("hidden");
+      });
+
+      document.getElementById("btn-skills")?.addEventListener("click", () => {
+        hideAllOverlays();
+        document.getElementById("skills-overlay")?.classList.remove("hidden");
+      });
+
+      document.getElementById("btn-projects")?.addEventListener("click", () => {
+        hideAllOverlays();
+        document.getElementById("projects-section")?.classList.remove("hidden");
+      });
+
+      document.getElementById("btn-hire")?.addEventListener("click", () => {
+        hideAllOverlays();
+        document.getElementById("contact-overlay")?.classList.remove("hidden");
+      });
+
+      /* ---------------- CLOSE BUTTONS ---------------- */
+      document.getElementById("close-professional")?.addEventListener("click", () =>
+        document.getElementById("overlay")?.classList.add("hidden")
+      );
+
+      document.getElementById("close-skills")?.addEventListener("click", () =>
+        document.getElementById("skills-overlay")?.classList.add("hidden")
+      );
+
+      document.getElementById("close-projects")?.addEventListener("click", () =>
+        document.getElementById("projects-section")?.classList.add("hidden")
+      );
+
+      document.getElementById("close-certifications")?.addEventListener("click", () =>
+        document.getElementById("certifications-section")?.classList.add("hidden")
+      );
+
+      document.getElementById("close-contact")?.addEventListener("click", () =>
+        document.getElementById("contact-overlay")?.classList.add("hidden")
+      );
+
+      document.getElementById("close-internship")?.addEventListener("click", () =>
+        document.getElementById("internship-overlay")?.classList.add("hidden")
+      );
+
+      /* ---------------- CARD NAVIGATION ---------------- */
+      document.getElementById("open-projects-card")?.addEventListener("click", () =>
+        document.getElementById("btn-projects")?.click()
+      );
+
+      document.getElementById("open-skills-card")?.addEventListener("click", () =>
+        document.getElementById("btn-professional")?.click()
+      );
+
+      document.getElementById("open-tools-card")?.addEventListener("click", () =>
+        document.getElementById("btn-skills")?.click()
+      );
+
+      document.getElementById("open-internship-card")?.addEventListener("click", () => {
+        hideAllOverlays();
+        document.getElementById("internship-overlay")?.classList.remove("hidden");
+      });
+
+      document.getElementById("open-certifications-card")?.addEventListener("click", () => {
+        hideAllOverlays();
+        document.getElementById("certifications-section")?.classList.remove("hidden");
+      });
+
+      /* ---------------- EMAILJS ---------------- */
+      emailjs.init("TCfLzxUvAH32olnkI");
+
+      document.getElementById("contact-form")?.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const popup = document.getElementById("status-popup");
+
+        emailjs.sendForm("service_is072eb", "template_0nlyj6p", this)
+          .then(() => {
+            popup.textContent = "Message sent!";
+            popup.style.display = "block";
+            this.reset();
+            setTimeout(() => (popup.style.display = "none"), 2000);
+          })
+          .catch(() => {
+            popup.textContent = "Failed to send!";
+            popup.style.display = "block";
+            setTimeout(() => (popup.style.display = "none"), 2000);
+          });
+      });
+
+      /* ---------------- MOBILE NAV TOGGLE (minimal added JS) ---------------- */
+      const navToggle = document.getElementById("nav-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      function closeMobileMenu() {
+        if (mobileMenu) {
+          mobileMenu.classList.remove("open");
+          mobileMenu.setAttribute("aria-hidden", "true");
+        }
+        if (navToggle) {
+          navToggle.setAttribute("aria-expanded", "false");
+        }
+      }
+
+      function openMobileMenu() {
+        if (mobileMenu) {
+          mobileMenu.classList.add("open");
+          mobileMenu.setAttribute("aria-hidden", "false");
+        }
+        if (navToggle) {
+          navToggle.setAttribute("aria-expanded", "true");
+        }
+      }
+
+      navToggle?.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (mobileMenu.classList.contains("open")) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+
+      // close mobile menu on outside click
+      document.addEventListener("click", (e) => {
+        if (!mobileMenu.contains(e.target) && !navToggle.contains(e.target)) {
+          closeMobileMenu();
+        }
+      });
+
+      // wire mobile menu buttons to same overlay logic
+      document.getElementById("m-btn-professional")?.addEventListener("click", () => {
+        hideAllOverlays();
+        document.getElementById("overlay")?.classList.remove("hidden");
+      });
+      document.getElementById("m-btn-skills")?.addEventListener("click", () => {
+        hideAllOverlays();
+        document.getElementById("skills-overlay")?.classList.remove("hidden");
+      });
+      document.getElementById("m-btn-projects")?.addEventListener("click", () => {
+        hideAllOverlays();
+        document.getElementById("projects-section")?.classList.remove("hidden");
+      });
+      document.getElementById("m-btn-hire")?.addEventListener("click", () => {
+        hideAllOverlays();
+        document.getElementById("contact-overlay")?.classList.remove("hidden");
+      });
+
+      // make sure closing overlays also closes mobile menu for small devices
+      const closeBtns = document.querySelectorAll(".close-btn");
+      closeBtns.forEach(btn => btn.addEventListener("click", closeMobileMenu));
+    });
+  </script>
+
+  <div id="status-popup"></div>
+</body>
+</html>
